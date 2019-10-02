@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.cc_gmbh.zukui.Controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Datei">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Neu" />
+                        <MenuItem mnemonicParsing="false" text="Öffnen" />
+                        <MenuItem mnemonicParsing="false" text="Speichern" />
+                        <MenuItem mnemonicParsing="false" text="Speichern unter" />
+                        <MenuItem mnemonicParsing="false" text="Nach Common" />
+                        <MenuItem mnemonicParsing="false" text="Drucken" />
+                        <MenuItem mnemonicParsing="false" text="Beenden" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Bearbeiten">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Kopieren" />
+                        <MenuItem mnemonicParsing="false" text="Ausschneiden" />
+                        <MenuItem mnemonicParsing="false" text="Einfügen" />
+                        <MenuItem mnemonicParsing="false" text="Löschen" />
+                        <MenuItem mnemonicParsing="false" text="Neuer Datensatz" />
+                        <MenuItem mnemonicParsing="false" text="Neuer Kommentar" />
+                        <MenuItem mnemonicParsing="false" text="Bearbeite Datensatz" />
+                        <MenuItem mnemonicParsing="false" text="Alles markieren" />
+                        <MenuItem mnemonicParsing="false" text="Alles demakieren" />
+                        <MenuItem mnemonicParsing="false" text="Stunden anzeigen" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Favoriten">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Zu den Favoriten hinzufügen" />
+                        <MenuItem mnemonicParsing="false" text="Aus den Favoriten einfügen" />
+                        <MenuItem mnemonicParsing="false" text="Favoriten verwalten" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Einstellungen">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Personalangaben" />
+                        <MenuItem mnemonicParsing="false" text="Pfadangaben" />
+                        <MenuItem mnemonicParsing="false" text="Anzahl der Stunden" />
+                        <RadioMenuItem mnemonicParsing="false" text="Darkmode" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Hilfe">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Benutzerhandbuch" />
+                        <MenuItem mnemonicParsing="false" text="Zeit- und Reisekostenregelung der CC-Gruppe" />
+                        <MenuItem mnemonicParsing="false" text="Benutzung und Behandlung von Geschäftsfahrzeugen in der CC-Gruppe" />
+                        <MenuItem mnemonicParsing="false" text="Chronologie" />
+                        <MenuItem mnemonicParsing="false" text="Support: Probleme oder Wünsche melden" />
+                        <MenuItem mnemonicParsing="false" text="Programminformationen" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <bottom>
+      <TableView prefHeight="575.0" prefWidth="1245.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="110.0" text="Datum" />
+          <TableColumn prefWidth="60.0" text="von" />
+            <TableColumn prefWidth="60.0" text="bis" />
+            <TableColumn prefWidth="130.0" text="Reise von" />
+            <TableColumn prefWidth="130.0" text="Reise nach" />
+            <TableColumn prefWidth="170.0" text="Kunde/Projekt" />
+            <TableColumn prefWidth="35.0" text="Ort" />
+            <TableColumn prefWidth="65.0" text="P#" />
+            <TableColumn prefWidth="30.0" text="Ss" />
+            <TableColumn prefWidth="65.0" text="S#" />
+            <TableColumn prefWidth="60.0" text="Km" />
+            <TableColumn prefWidth="35.0" text="KO" />
+            <TableColumn prefWidth="110.0" text="Spesen" />
+            <TableColumn prefWidth="60.0" text="WKZ" />
+            <TableColumn prefWidth="110.0" text="Spesen in EUR" />
+            <TableColumn prefWidth="15.0" text="v" />
+        </columns>
+      </TableView>
+   </bottom>
+   <center>
+      <GridPane prefHeight="144.0" prefWidth="1245.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane id="gridpaneleft" onMouseClicked="#openPerso" styleClass="grid">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label id="vorname" fx:id="vorname" text="Vorname:" />
+                  <Label text="PKW:" GridPane.rowIndex="1" />
+                  <Label text="PersNr:" GridPane.rowIndex="2" />
+                  <Label text="Monat:" GridPane.rowIndex="3" />
+                  <Label text="KmStand:" GridPane.rowIndex="4" />
+                  <Label text="Nachname:" GridPane.columnIndex="1" />
+                  <Label text="Firma:" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
